@@ -1,0 +1,181 @@
+
+<!-- teiHeader -->               
+<teiHeader xmlns="http://www.tei-c.org/ns/1.0">
+   
+   <fileDesc>
+      <titleStmt>
+         <!-- Titre du document-->
+         <title> Corpus judiciaire - ANOM, Secrétariat d'Etat à la Marine, Personnel colonial ancien (COL-E). Projet MEGV. FNS - Unige</title>
+         
+         <respStmt><!-- Responsabilités dans l'édition -->
+            <resp>Direction du projet MEGV</resp>
+            <persName xml:id="MH">
+               <forename>Marie</forename>
+               <surname>Houllemare</surname>
+               <ptr type="orcid" target="0000-0002-9120-8944"/>
+            </persName>
+         </respStmt>
+         <respStmt>
+            <resp>Encoding</resp>
+            <persName xml:id="EB">
+               <forename>Elodie</forename>
+               <surname>Bascoul</surname>
+               <roleName>doctorante du projet MEGV</roleName>
+               <ptr type="orcid" target="0009-0002-7324-6469"/>
+            </persName>
+            <persName xml:id="MP">
+               <forename>Marion</forename>
+               <surname>Philip</surname>
+               <roleName>postdoctorante du projet MEGV</roleName>
+               <ptr type="orcid" target="0009-0001-6846-2688"/>
+            </persName>
+         </respStmt>
+         <respStmt>
+            <resp>Transcription</resp>
+            <persName ref="#EB"/>
+            <persName ref="#MP"/>
+            <persName xml:id="MM">
+               <forename>Méloé</forename>
+               <surname>Maillard</surname>
+               <roleName>Assistante de recherche du projet MEGV</roleName>
+            </persName>
+         </respStmt>
+         <respStmt>
+            <resp>Soutien numérique</resp>
+            <persName xml:id="SG">
+               <forename>Simon</forename>
+               <surname>Gabay</surname>
+               <ptr type="orcid" target="0000-0001-9094-4475"/>
+            </persName>
+            <persName xml:id="FG">
+               <forename>Floriane</forename>
+               <surname>Goy</surname>
+               <ptr type="orcid" target="0009-0005-9944-035X"/>
+            </persName>
+            <persName xml:id="TGN">
+               <forename>Thomas</forename>
+               <surname>Gauffroy-Naudin</surname>
+               <roleName>Alimentation du site du projet MEGV</roleName>
+               <ptr type="orcid" target="0009-0003-5309-8515"/>
+            </persName>
+         </respStmt>
+         
+      </titleStmt>
+      
+      <!-- Nombre de facsimilés-->
+      <extent>
+         <measure unit="total_images" n="17620"/>
+      </extent>
+      
+      <!-- Définition du projet, institutions, financements, licence-->
+      <publicationStmt> 
+         <publisher>Projet MEGV</publisher>
+         <authority>Université de Genève</authority>
+         <address>
+            <addrLine>Uni Bastions, rue St-Ours</addrLine>
+            <addrLine>CH-1211 Genève</addrLine>
+            <country>Suisse</country>
+         </address>
+         <authority>Fonds national suisse (FNS)</authority>
+         <address>
+            <addrLine>Wildhainweg 3</addrLine>
+            <addrLine>CH-3001 Berne</addrLine>
+            <country>Suisse</country>
+         </address>
+         <availability status="restricted" n="CC-BY-NC">
+            <licence target="https://creativecommons.org/licenses/by-nc/4.0/deed.fr"/>
+            <p>Creative Commons Attribution CC BY-NC 4.0</p>
+         </availability>
+         <date when="2025-06-12"/> 
+      </publicationStmt>
+      
+      <!-- Présentation fonds d'archive du document -->
+      <sourceDesc>
+         <msDesc>
+            <msIdentifier>
+               <country>France</country>
+               <settlement>Paris</settlement>
+               <institution>ANOM</institution>
+               <repository>Secrétariat d'Etat à la Marine</repository>
+               <collection>COL E</collection>
+            </msIdentifier>
+            
+            <!-- Lien vers l'ensemble de la collection COL E en ligne sur le site des ANOM -->
+            <additional> 
+               <surrogates>
+                  <bibl>
+                     <ref type="archive_collection_website" target="https://recherche-anom.culture.gouv.fr/ark:/61561/wz818ikq"/>
+                  </bibl>
+               </surrogates>
+            </additional>
+            
+         </msDesc>
+      </sourceDesc>
+   </fileDesc>
+   
+   <!-- Informations sur le projet d'édition critique de MEGV : règles de transcription, d'encodage, outils utilisés-->
+   <encodingDesc>
+      <projectDesc>
+         <p>Ce corpus numérique s'incrit dans le cadre du projet MEGV, dirigé par la Professeure Marie Houllemare (Université de Genève) et financé par le FNS.</p>
+      </projectDesc>
+      <editorialDecl>
+         <correction>
+            <p>Vous trouverez les règles de transcription du corpus à l'adresse suivante: <ptr target="www.google.fr--"/>. La segmentation et l'OCR ont été réalisés automatiquement puis corrigés.</p>
+         </correction>
+         <normalization>
+            <p>Vous trouverez les règles de normalisation du corpus à l'adresse suivante: <ptr target="www.google.fr--"/>.</p>
+         </normalization>
+      </editorialDecl>
+      <appInfo>
+         <application ident="Kraken" version="4.1">
+            <label>Kraken</label>
+            <ptr target="https://github.com/mittagessen/kraken"/>
+         </application>
+      </appInfo>
+      <appInfo>
+         <application ident="FoNDUE" version="0.1">
+            <label>FoNDUE</label>
+            <ptr target="https://test2.fondue.unige.ch/"/>
+         </application>
+      </appInfo>
+      <appInfo>
+         <application ident="AltoToTei" version="1.0">
+            <label>AltoToTei</label>
+            <ptr target="https://github.com/Gallicorpora/application/tree/main"/>
+         </application>
+      </appInfo>
+      
+      <!-- Ontologies utilisées-->
+      <classDecl>
+         <taxonomy xml:id="SegmOnto">
+            <bibl>
+               <title>SegmOnto</title>
+               <ptr target="https://segmonto.github.io/"/>
+            </bibl>
+            <category xml:id="SegmOntoZones"/>
+            <category xml:id="SegmOntoLines"/>
+         </taxonomy>
+      </classDecl>
+   </encodingDesc>  
+   
+   <profileDesc>
+      
+      <textClass>
+         <keywords scheme ="Nom_du_référentiel">
+            <list>
+               <item>Un mot clef</item>
+               <item>Un mot clef</item>
+            </list>
+         </keywords>
+      </textClass>
+   </profileDesc>
+   
+   <!--Suivi des modifications du fichier TEI-->
+   <revisionDesc>
+      <change when="2025-06-12">
+         <persName ref="#MP"/>
+         <p>Création du fichier TEI P5.</p>
+      </change>
+   </revisionDesc>
+</teiHeader>
+         
