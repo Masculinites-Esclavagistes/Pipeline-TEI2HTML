@@ -6,7 +6,36 @@ This repository contains the steps of the pipeline adapted to the needs of the M
 - if this XML-TEI corpus file is too large to be displayed correctly by a browser, divide it using a python script into several XML-TEI files.
 - From this XML-TEI file containing the selected corpus, obtain one or more HTML pages which will make it easier to consult the results for the first time, by carrying out a full-text search.
 
-  
+
+# How to use 
+
+To use this pipeline: 
+## Phase 1: PYTHON: Compilation of data and file - XML-TEI corpus
+- Add your inferred folders to "Pipeline-TEI2HTML/PYTHON/data".
+- If necessary, change the information contained in the ‘’Pipeline-TEI2HTML/PYTHON/tei_header.xml‘’ file
+- in your Terminal :
+  - activate a virtual environment such as yaltaienv, if you have installed the rtk environment on your computer.
+  - go to "Pipeline-TEI2HTML/PYTHON", then run the various scripts one after the other:
+    1_clean_tei.py
+    2_compile_tei_by_file.py
+    3_correct_tei.py
+    4_validation_tei.py
+    5_compile_files2corpus.py
+    if necessary (more than 500 000 lines in your XML-TEI file will crash your HTML page) : 
+    6_divide_xml.py
+
+You should have one or more XML-TEI files created at the end of this first phase, in "Pipeline-TEI2HTML/PYTHON/output".
+
+## Phase 2: WEB INTERFACE: Conversion to HTML format
+- Open the .xpr file "Pipeline-TEI2HTML/PipeLine_COL-E.xpr" in Oxygen XML.
+- In "Pipeline-TEI2HTML/Web_interface", open the script "tei2html.xslt".
+- Click on "Configure transformation scenarios", select and tick "tei2html" in the list displayed, then "Edit".
+- A page opens: 
+In the XSLT tab
+XML URL: search your folders for the path to your XML-TEI corpus file (or files), which should be "Pipeline-TEI2HTML/PYTHON/output"
+XSL URL: search for the path to the tei2html. xslt script, which must be "Pipeline-TEI2HTML/Web_interface/tei2html.xsl"
+ Click on the Output tab, opposite "Save as", and enter the output path you want for your HTML page(s), which must be "Pipeline-TEI2HTML/Web_interface/output/".
+
 # Licences
 
 CC-BY-NC.
