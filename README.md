@@ -16,12 +16,19 @@ To use this pipeline:
 - in your Terminal :
   - activate a virtual environment such as yaltaienv, if you have installed the rtk environment on your computer.
   - go to "Pipeline-TEI2HTML/PYTHON", then run the various scripts one after the other:
+  
     1_clean_tei.py
+    
     2_compile_tei_by_file.py
+    
     3_correct_tei.py
+    
     4_validation_tei.py
+    
     5_compile_files2corpus.py
-    if necessary (more than 500 000 lines in your XML-TEI file will crash your HTML page) : 
+    
+    if necessary (more than 500 000 lines in your XML-TEI file will crash your HTML page) :
+    
     6_divide_xml.py
 
 You should have one or more XML-TEI files created at the end of this first phase, in "Pipeline-TEI2HTML/PYTHON/output".
