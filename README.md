@@ -1,10 +1,10 @@
 # Pipeline-TEI2HTML
-This repository contains the steps of the pipeline adapted to the needs of the MEGV project to process the result of the inference of a set of files from the ANOM COL-E collection.
-The objective is:
-- to compile with a python script all the .tei files resulting from the inference of the digital facsimiles of the archives by folder.
+This repository contains the steps of the pipeline adapted to the needs of the MEGV project to process the result of the inference of a set of files from the ANOM COL-E collection. The objective is to
+- to compile all the .tei files resulting from the inference with a python script of the digital facsimiles of the archives per folder.
 - correct these files and format them so that they are compatible with the XML format.
-- to compile with a python script all the .tei files obtained per folder into a single TEI-XML file containing the entire corpus selected.
-- from this TEI-XML file containing the selected corpus, obtain one or more html pages to facilitate an initial consultation of the results, by carrying out a full-text search.
+- compile all the .tei files obtained per folder into a single XML-TEI file containing the entire selected corpus.
+- if this XML-TEI corpus file is too large to be displayed correctly by a browser, divide it using a python script into several XML-TEI files.
+- From this XML-TEI file containing the selected corpus, obtain one or more HTML pages which will make it easier to consult the results for the first time, by carrying out a full-text search.
 
   
 # Licences
