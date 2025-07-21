@@ -159,4 +159,10 @@
   <xsl:template match="@*">
     <xsl:copy/>
   </xsl:template>
+  
+  <!-- Désencoder &amp; en & dans tous les textes -->
+  <xsl:template match="text()">
+    <xsl:value-of select="replace(., '&amp;amp;', '&amp;')" disable-output-escaping="yes"/>
+  </xsl:template>
+  
 </xsl:stylesheet>
