@@ -35,7 +35,7 @@ You should have one or more XML-TEI files created at the end of this first phase
 
 ## Phase 2: WEB INTERFACE: Conversion to HTML format
 - Open the .xpr file "Pipeline-TEI2HTML/PipeLine_COL-E.xpr" in Oxygen XML.
-- In "Pipeline-TEI2HTML/Web_interface", open the script "tei2html.xslt".
+- In "Pipeline-TEI2HTML/Web_interface", open the script "tei2html.xsl".
 - Click on "Configure transformation scenarios", select and tick "tei2html" in the list displayed, then "Edit".
 - A page opens: 
 In the XSLT tab
