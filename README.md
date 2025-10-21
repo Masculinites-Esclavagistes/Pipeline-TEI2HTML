@@ -1,6 +1,7 @@
 # Pipeline-TEI2HTML
-This repository contains the steps of the pipeline adapted to the needs of the MEGV project to process the result of the inference of a set of files from the ANOM COL-E collection. The objective is to
-- to compile all the .tei files resulting from the inference with a python script of the digital facsimiles of the archives per folder.
+This repository contains the steps of the pipeline adapted to the needs of the MEGV project to process the result of the inference of a set of files from the ANOM COL-E collection. The objective is to :
+- delete the content of DigitizationArtefactZone and StampZone that are useless.
+- compile all the .tei files resulting from the inference with a python script of the digital facsimiles of the archives per folder.
 - correct these files and format them so that they are compatible with the XML format.
 - compile all the .tei files obtained per folder into a single XML-TEI file containing the entire selected corpus.
 - if this XML-TEI corpus file is too large to be displayed correctly by a browser, divide it using a python script into several XML-TEI files.
@@ -16,20 +17,29 @@ To use this pipeline:
 - in your Terminal :
   - activate a virtual environment such as yaltaienv, if you have installed the rtk environment on your computer.
   - go to "Pipeline-TEI2HTML/PYTHON", then run the various scripts one after the other:
-  
+
+    0_remove_artefact_zones.py
+      => Deletes the content of DigitizationArtefactZone and StampZone, preserve other zones.
+
     1_clean_tei.py
+      => Cleans the .tei file by removing all tags, restructures by adding simple TEI tags <p> and <lb/>
     
     2_compile_tei_by_file.py
-    
+      => Group files by folder
+
     3_correct_tei.py
-    
+      => Adds namespace and standard TEI structure
+
     4_validation_tei.py
+      => Validates XML compliance
     
     5_compile_files2corpus.py
-    
+      -> Compile the complete corpus
+
     if necessary (more than 500 000 lines in your XML-TEI file will crash your HTML page) :
     
     6_divide_xml.py
+      => Divide the corpus into manageable parts
 
 You should have one or more XML-TEI files created at the end of this first phase, in "Pipeline-TEI2HTML/PYTHON/output".
 
