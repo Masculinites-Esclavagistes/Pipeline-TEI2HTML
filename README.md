@@ -22,7 +22,7 @@ To use this pipeline:
       => Deletes the content of DigitizationArtefactZone and StampZone, preserve other zones.
 
     1_clean_tei.py
-      => Cleans the .tei file by removing all tags, convert & into "\&amp;" ; > into "\&gt;" ; < into "&lt" ; " into "\&quot;"; ' into "\&apos;" (XML characters), and restructures by adding simple TEI tags like ‘‘\<p>‘‘ and ‘‘\<lb/>‘‘
+      => Cleans the .tei file by removing all tags, convert XML characters (& into "\&amp;" ; > into "\&gt;" ; < into "&lt" ; " into "\&quot;"; ' into "\&apos;"), and restructures by adding simple TEI tags like ‘‘\<p>‘‘ and ‘‘\<lb/>‘‘
     
     2_compile_tei_by_file.py
       => Group files by folder
