@@ -2,7 +2,7 @@ import os
 from lxml import etree
 
 # Dossier contenant les fichiers TEI
-base_folder = "/Users/philipm/Documents/Pipeline_TEI/PYTHON/data"
+base_folder = "data"
 
 # Fonction de validation XML
 def validate_tei_file(file_path):

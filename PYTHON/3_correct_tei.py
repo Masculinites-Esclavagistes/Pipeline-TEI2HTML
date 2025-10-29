@@ -2,7 +2,7 @@ import os
 from lxml import etree
 
 # Dossier où se trouvent les fichiers
-base_folder = "/Users/philipm/Documents/Pipeline_TEI/PYTHON/data"
+base_folder = "data"
 
 def correct_tei_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:

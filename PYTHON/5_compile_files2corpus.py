@@ -2,9 +2,9 @@ import os
 from lxml import etree
 
 # === 📁 Chemins ===
-input_dir = "/Users/philipm/Documents/Pipeline_TEI/PYTHON/data"
-header_file = "/Users/philipm/Documents/Pipeline_TEI/PYTHON/tei_header.xml"
-output_file = "/Users/philipm/Documents/Pipeline_TEI/PYTHON/output/megv_corpus.xml"
+input_dir = "data"
+header_file = "tei_header.xml"
+output_file = "output/votre_corpus.xml"
 
 # === 📄 Lire le fichier tei_header.xml (même s’il ne contient QUE <teiHeader>) ===
 with open(header_file, 'r', encoding='utf-8') as f:
