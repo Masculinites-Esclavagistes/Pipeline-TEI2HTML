@@ -3,8 +3,8 @@ import os
 import math
 
 # Paramètres
-input_file = "/Users/philipm/Documents/Pipeline_TEI/PYTHON/output/megv_corpus.xml"
-output_dir = "/Users/philipm/Documents/Pipeline_TEI/PYTHON/output/parts"
+input_file = "PYTHON/output/corpus_final.xml"
+output_dir = "PYTHON/output/parts"
 divs_per_file = 178
 
 # Créer dossier de sortie s'il n'existe pas
@@ -43,6 +43,6 @@ for i in range(total_parts):
         body_el.append(div)
 
     # Sauvegarde
-    output_path = os.path.join(output_dir, f"megv_corpus_part{i+1}.xml")
+    output_path = os.path.join(output_dir, f"corpus_final_part{i+1}.xml")
     etree.ElementTree(tei).write(output_path, encoding="utf-8", xml_declaration=True, pretty_print=True)
     print(f"✅ Écrit : {output_path}")
