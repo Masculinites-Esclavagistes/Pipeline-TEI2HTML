@@ -12,7 +12,7 @@ This repository contains the steps of the pipeline adapted to the needs of the M
 
 To use this pipeline: 
 ## Phase 1: PYTHON: Compilation of data and file - XML-TEI corpus
-- Add your inferred folders to "Pipeline-TEI2HTML/PYTHON/data".
+- Add your inferred folders to "Pipeline-TEI2HTML/PYTHON/data". ⚠️ Be careful to add only a COPY of your files to data, not the original transcripts, which will be permanently modified after the pipeline is executed.
 - If necessary, change the information contained in the ‘’Pipeline-TEI2HTML/PYTHON/tei_header.xml‘’ file
 - in your Terminal :
   - activate a virtual environment such as yaltaienv, if you have installed the rtk environment on your computer.
